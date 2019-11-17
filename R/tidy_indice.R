@@ -1,13 +1,14 @@
-# tidy_indice
-#
-# This is the script of the tidy_indice function
-# that tidy up a single indices file retrieved from
-# gapminder in .xlsx files.
-#
-#
-#
-# You can download Gapminder indices at
-#   https://www.gapminder.org/data/
+#' Tidy Gapminder indice single data sheet (.xlsx file).
+#'
+#' @param path Absolute path to folder to indice data sheet.
+#'
+#' @return The indice data sheet as a tidy data frame.
+#' @examples
+#' library(tidygapminder)
+#'
+#' tidy_indice(path = "filename.xlsx")
+#'
+#' \href{https://aebou.rbind.io/tidygapminder}{Package documentation}
 #
 #' @export
 tidy_indice <- function(path = ".") {

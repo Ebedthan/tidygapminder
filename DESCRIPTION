@@ -1,19 +1,23 @@
 Package: tidygapminder
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A Set of Functions to Handle Gapminder Datasets
 Version: 0.1.0
-Author: Anicet Ebou
+Authors@R: person("Anicet", "Ebou", email = "anicet.ebou@gmail.com",
+                  role = c("aut", "cre"))
 Maintainer: Anicet Ebou <anicet.ebou@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
-Encoding: UTF-8
-LazyData: true
+Description: A set of functions to handle gapminder datasets. It provides
+    useful functions to tidy a bunch or single indice data sheet, and turn it into
+    one dataframe.
+Depends: R (>= 3.1.0)
 Imports: 
     tidyr,
     readxl,
     dplyr
 Suggests: 
     testthat
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
 URL: http://aebou.rbind.io/tidygapminder
 BugReports: https://github.com/ebedthan/tidygapminder/issues
+RoxygenNote: 7.0.0
