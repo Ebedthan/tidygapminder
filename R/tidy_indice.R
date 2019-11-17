@@ -10,10 +10,19 @@
 #'
 #'
 #' @export
-tidy_indice <- function(path = ".") {
+tidy_indice <- function(filepath) {
 
   # Read data ---------------------------------
-  df <- readxl::read_excel(path)
+  # To enable reading of all format
+  if (tools::file_ext(filepath) == "xlsx") {
+    df <- readxl::read_xlsx(filepath)
+  } else if (tools::file_ext(filepath) == "xls") {
+    df <- readxl::read_xls(filepath)
+  } else if (tools::file_ext(filepath) == "csv") {
+    df <- data.table::fread(filepath)
+  } else {
+    stop("Your file is not csv or xls|xlsx formated")
+  }
 
   # To store indice name and description that is in first
   # cell of gapminder sheet.
