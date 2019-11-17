@@ -11,8 +11,8 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     tidyr,
-    dplyr,
-    readxl
+    readxl,
+    dplyr
 Suggests: 
     testthat
 URL: http://aebou.rbind.io/tidygapminder
