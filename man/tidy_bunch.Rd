@@ -2,7 +2,7 @@
 % Please edit documentation in R/tidy_bunch.R
 \name{tidy_bunch}
 \alias{tidy_bunch}
-\title{Tidy Gapminder indices data sheets (.xlsx file) stored in a folder
+\title{Tidy Gapminder indices data sheets stored in a folder
 using \code{\link{tidy_indice}}.}
 \usage{
 tidy_bunch(path = ".", merge = FALSE, ...)
@@ -16,11 +16,11 @@ in one. Default: FALSE.}
 }
 \value{
 List of indices data frames tidied (if \code{merge} = FALSE)
-        or a single data frame of all indices tidied
-        (if \code{merge} = TRUE).
+   or a single data frame of all indices tidied
+   (if \code{merge} = TRUE).
 }
 \description{
-Tidy Gapminder indices data sheets (.xlsx file) stored in a folder
+Tidy Gapminder indices data sheets stored in a folder
 using \code{\link{tidy_indice}}.
 }
 \examples{
@@ -29,6 +29,5 @@ dir_path <- paste0(getwd(), "/indices_dir")
 
 tidy_bunch(path = dir_path, merge = TRUE)
 
-\\url{https://aebou.rbind.io/tidygapminder}
 
 }

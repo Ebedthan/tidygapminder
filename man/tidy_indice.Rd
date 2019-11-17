@@ -4,7 +4,7 @@
 \alias{tidy_indice}
 \title{Tidy Gapminder indice single data sheet (.xlsx file).}
 \usage{
-tidy_indice(path = ".")
+tidy_indice(filepath)
 }
 \arguments{
 \item{path}{Absolute path to folder to indice data sheet.}
@@ -20,6 +20,5 @@ library(tidygapminder)
 
 tidy_indice(path = "filename.xlsx")
 
-\\url{https://aebou.rbind.io/tidygapminder}
 
 }
