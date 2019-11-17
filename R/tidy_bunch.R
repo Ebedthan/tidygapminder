@@ -1,17 +1,21 @@
-#' Tidy Gapminder indices data sheets (.xlsx file) stored in a folder using \code{\link{tidy_indice}}.
+#' Tidy Gapminder indices data sheets (.xlsx file) stored in a folder
+#' using \code{\link{tidy_indice}}.
 #'
-#' @param path Absolute path to folder containing indices data sheets.
-#' @param merge A boolean. If true, combines all indices data sheets in one. Default: FALSE.
-#' @return List of indices data frames tidied (if \code{merge} = FALSE) or a single data frame
-#'         of all indices tidied (if \code{merge} = TRUE).
+#' @param path Absolute path to folder containing indices
+#'             data sheets.
+#' @param merge A boolean. If true, combines all indices data sheets
+#'              in one. Default: FALSE.
+#' @return List of indices data frames tidied (if \code{merge} = FALSE)
+#'         or a single data frame of all indices tidied
+#'         (if \code{merge} = TRUE).
 #' @examples
 #' library(tidygapminder)
 #' dir_path <- paste0(getwd(), "/indices_dir")
 #'
 #' tidy_bunch(path = dir_path, merge = TRUE)
 #'
-#' \href{https://aebou.rbind.io/tidygapminder}{Package documentation}
-#
+#' \url{https://aebou.rbind.io/tidygapminder}
+#'
 #' @export
 tidy_bunch <- function(path = ".", merge = FALSE, ...) {
 

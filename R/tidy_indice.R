@@ -8,8 +8,8 @@
 #'
 #' tidy_indice(path = "filename.xlsx")
 #'
-#' \href{https://aebou.rbind.io/tidygapminder}{Package documentation}
-#
+#' \url{https://aebou.rbind.io/tidygapminder}
+#'
 #' @export
 tidy_indice <- function(path = ".") {
 

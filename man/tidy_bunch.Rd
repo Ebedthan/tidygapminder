@@ -2,21 +2,26 @@
 % Please edit documentation in R/tidy_bunch.R
 \name{tidy_bunch}
 \alias{tidy_bunch}
-\title{Tidy Gapminder indices data sheets (.xlsx file) stored in a folder using \code{\link{tidy_indice}}.}
+\title{Tidy Gapminder indices data sheets (.xlsx file) stored in a folder
+using \code{\link{tidy_indice}}.}
 \usage{
 tidy_bunch(path = ".", merge = FALSE, ...)
 }
 \arguments{
-\item{path}{Absolute path to folder containing indices data sheets.}
+\item{path}{Absolute path to folder containing indices
+data sheets.}
 
-\item{merge}{A boolean. If true, combines all indices data sheets in one. Default: FALSE.}
+\item{merge}{A boolean. If true, combines all indices data sheets
+in one. Default: FALSE.}
 }
 \value{
-List of indices data frames tidied (if \code{merge} = FALSE) or a single data frame
-        of all indices tidied (if \code{merge} = TRUE).
+List of indices data frames tidied (if \code{merge} = FALSE)
+        or a single data frame of all indices tidied
+        (if \code{merge} = TRUE).
 }
 \description{
-Tidy Gapminder indices data sheets (.xlsx file) stored in a folder using \code{\link{tidy_indice}}.
+Tidy Gapminder indices data sheets (.xlsx file) stored in a folder
+using \code{\link{tidy_indice}}.
 }
 \examples{
 library(tidygapminder)
@@ -24,5 +29,6 @@ dir_path <- paste0(getwd(), "/indices_dir")
 
 tidy_bunch(path = dir_path, merge = TRUE)
 
-\\href{https://aebou.rbind.io/tidygapminder}{Package documentation}
+\\url{https://aebou.rbind.io/tidygapminder}
+
 }
