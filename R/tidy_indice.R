@@ -6,7 +6,7 @@
 #' @examples
 #' library(tidygapminder)
 #'
-#' tidy_indice(path = "filename.xlsx")
+#' tidy_indice(filepath = filename)
 #'
 #'
 #' @export
