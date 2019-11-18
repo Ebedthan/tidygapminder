@@ -1,6 +1,6 @@
 #' Tidy Gapminder indice single data sheet.
 #'
-#' @param path Absolute path to folder to indice data sheet.
+#' @param filepath Path to indice data sheet.
 #'
 #' @return The indice data sheet as a tidy data frame.
 #'
@@ -29,12 +29,11 @@ tidy_indice <- function(filepath) {
   }
   # Tidy data ---------------------------------
   names(df)[1] <- "country"
-  df <- df %>%
-    tidyr::pivot_longer(
-      -country,
-      names_to = "year",
-      values_to = "indice"
-      )
+  df <- tidyr::pivot_longer(data = df,
+                            cols = -country,
+                            names_to = "year",
+                            values_to = "indice"
+                            )
   df$year <- as.numeric(df$year)
   names(df)[3] <- file_desc
 

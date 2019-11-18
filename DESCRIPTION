@@ -16,7 +16,7 @@ Imports:
     dplyr
 Suggests: 
     testthat (>= 2.1.0)
-License: GPL-2
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: http://aebou.rbind.io/tidygapminder

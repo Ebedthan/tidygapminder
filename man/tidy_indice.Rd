@@ -7,7 +7,7 @@
 tidy_indice(filepath)
 }
 \arguments{
-\item{path}{Absolute path to folder to indice data sheet.}
+\item{filepath}{Path to indice data sheet.}
 }
 \value{
 The indice data sheet as a tidy data frame.
