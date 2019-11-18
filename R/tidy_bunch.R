@@ -5,7 +5,7 @@
 #'    data sheets.
 #' @param merge A boolean. If true, combines all indices data sheets
 #'    in one. Default: FALSE.
-#' @param ...
+#' @param ... Ellipsis
 #' @return List of indices data frames tidied (if \code{merge} = FALSE)
 #'    or a single data frame of all indices tidied
 #'    (if \code{merge} = TRUE).

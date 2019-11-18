@@ -13,6 +13,8 @@ data sheets.}
 
 \item{merge}{A boolean. If true, combines all indices data sheets
 in one. Default: FALSE.}
+
+\item{...}{Ellipsis}
 }
 \value{
 List of indices data frames tidied (if \code{merge} = FALSE)

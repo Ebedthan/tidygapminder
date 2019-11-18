@@ -15,15 +15,18 @@ tidy_indice <- function(filepath) {
   } else if (tools::file_ext(filepath) == "xls") {
     df <- readxl::read_xls(filepath)
   } else if (tools::file_ext(filepath) == "csv") {
-    df <- data.table::fread(filepath)
+    df <- data.table::fread(filepath, header = TRUE)
   } else {
     stop("Your file is not csv or xls|xlsx formated")
   }
 
   # To store indice name and description that is in first
   # cell of gapminder sheet.
-  file_desc <- colnames(df)[1]
-
+  if (colnames(df)[1] == "country") {
+    file_desc <- basename(tools::file_path_sans_ext(filepath))
+  } else {
+    file_desc <- colnames(df)[1]
+  }
   # Tidy data ---------------------------------
   names(df)[1] <- "country"
   df <- df %>%
