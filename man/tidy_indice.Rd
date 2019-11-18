@@ -15,10 +15,3 @@ The indice data sheet as a tidy data frame.
 \description{
 Tidy Gapminder indice single data sheet.
 }
-\examples{
-library(tidygapminder)
-
-tidy_indice(filepath = filename)
-
-
-}

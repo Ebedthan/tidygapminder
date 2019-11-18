@@ -9,11 +9,6 @@
 #' @return List of indices data frames tidied (if \code{merge} = FALSE)
 #'    or a single data frame of all indices tidied
 #'    (if \code{merge} = TRUE).
-#' @examples
-#' library(tidygapminder)
-#' dir_path <- paste0(getwd(), "/indices_dir")
-#'
-#' tidy_bunch(path = dir_path, merge = TRUE)
 #'
 #'
 #' @export

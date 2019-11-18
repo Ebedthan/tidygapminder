@@ -3,10 +3,6 @@
 #' @param path Absolute path to folder to indice data sheet.
 #'
 #' @return The indice data sheet as a tidy data frame.
-#' @examples
-#' library(tidygapminder)
-#'
-#' tidy_indice(filepath = filename)
 #'
 #'
 #' @export
