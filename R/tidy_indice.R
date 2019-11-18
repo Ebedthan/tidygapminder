@@ -1,4 +1,4 @@
-#' Tidy Gapminder indice single data sheet (.xlsx file).
+#' Tidy Gapminder indice single data sheet.
 #'
 #' @param path Absolute path to folder to indice data sheet.
 #'
