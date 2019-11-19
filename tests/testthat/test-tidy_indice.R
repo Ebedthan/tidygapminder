@@ -9,4 +9,3 @@ test_that("Colnames are right", {
   expect_equal(colnames(tidy_indice(df)),
                c("country", "year", "children_per_woman_total_fertility"))
 })
-
