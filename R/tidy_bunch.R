@@ -1,7 +1,7 @@
 #' Tidy Gapminder indices data sheets stored in a folder
 #' using \code{\link{tidy_indice}}.
 #'
-#' @param path Absolute path to folder containing indices
+#' @param dirpath Absolute path to folder containing indices
 #'    data sheets.
 #' @param merge A boolean. If true, combines all indices data sheets
 #'    in one. Default: FALSE.
@@ -12,14 +12,14 @@
 #'
 #'
 #' @export
-tidy_bunch <- function(path = ".", merge = FALSE, ...) {
+tidy_bunch <- function(dirpath = ".", merge = FALSE, ...) {
 
   # Data import ---------------------------------------
 
   # Gapminder indices files souhl be in the same directory
   # to be grouped under a same indice group.
   message("We take in only csv, xls or xlsx files")
-  file_list <- list.files(path, pattern = "[.](csv|xls|xlsx)$",
+  file_list <- list.files(dirpath, pattern = "[.](csv|xls|xlsx)$",
                           full.names = TRUE)
 
   # Tidy data ---------------------------------------

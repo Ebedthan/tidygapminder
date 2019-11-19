@@ -5,10 +5,10 @@
 \title{Tidy Gapminder indices data sheets stored in a folder
 using \code{\link{tidy_indice}}.}
 \usage{
-tidy_bunch(path = ".", merge = FALSE, ...)
+tidy_bunch(dirpath = ".", merge = FALSE, ...)
 }
 \arguments{
-\item{path}{Absolute path to folder containing indices
+\item{dirpath}{Absolute path to folder containing indices
 data sheets.}
 
 \item{merge}{A boolean. If true, combines all indices data sheets
