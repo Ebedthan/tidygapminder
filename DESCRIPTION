@@ -2,8 +2,8 @@ Package: tidygapminder
 Type: Package
 Title: A Set of Functions to Handle Gapminder Datasets
 Version: 0.1.0
-Authors@R: person("Anicet", "Ebou", "anicet.ebou@gmail.com",
-                  role = c("aut", "cre"), comment = c(ORCID = 0000-0003-4005-177X))
+Authors@R: person("Anicet", "Ebou", ,"anicet.ebou@gmail.com",
+                  role = c("aut", "cre"), comment = c(ORCID = "0000-0003-4005-177X"))
 Maintainer: Anicet Ebou <anicet.ebou@gmail.com>
 Description: A set of functions to handle gapminder datasets. It provides
     useful functions to tidy a bunch or single indice data sheet, and turn it into
