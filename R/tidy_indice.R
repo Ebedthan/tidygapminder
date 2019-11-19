@@ -30,7 +30,7 @@ tidy_indice <- function(filepath) {
   # Tidy data ---------------------------------
   names(df)[1] <- "country"
   df <- tidyr::pivot_longer(data = df,
-                            cols = -country,
+                            cols = -"country",
                             names_to = "year",
                             values_to = "indice"
                             )
