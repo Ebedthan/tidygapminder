@@ -19,6 +19,7 @@ tidy_bunch <- function(dirpath = ".", merge = FALSE, ...) {
   # Gapminder indices files souhl be in the same directory
   # to be grouped under a same indice group.
   message("We take in only csv or xlsx files")
+
   file_list <- list.files(dirpath, pattern = "[.](csv|xlsx)$",
                           full.names = TRUE)
 
