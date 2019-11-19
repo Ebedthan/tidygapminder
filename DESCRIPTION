@@ -16,10 +16,13 @@ Imports:
     dplyr
 Suggests: 
     testthat (>= 2.1.0),
-    covr
+    covr,
+    knitr,
+    rmarkdown
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: http://aebou.rbind.io/tidygapminder
 BugReports: https://github.com/ebedthan/tidygapminder/issues
 RoxygenNote: 7.0.0
+VignetteBuilder: knitr

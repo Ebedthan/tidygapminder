@@ -1,0 +1,48 @@
+---
+title: "A simple look into tidygapminder"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{tidygapminder}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This package aims to make really easy to tidy data retrieved from [Gapminder](https://www.gapminder.org). A the begining is:
+
+```{r}
+library(tidygapminder)
+```
+
+When you have loaded the package you are now in possesion of two super powers (functions): tidy_indice and tidy_bunch.
+
+## tidy_indice
+
+`tidy_indice` fucntion tidy as explain above tidy a data sheet downloaded on Gapminder. This data sheet can be either in csv or xlsx as indicated on the gapminder site.
+
+`tidy_indice` take as argument the path to the file and return the data as a tidy data frame.
+
+```{r}
+filepath <- system.file("extdata", "life_expectancy_years.csv", package = "tidygapminder")
+
+tidy_indice(filepath)
+```
+
+
+## tidy_bunch
+
+`tidy_bunch` makes use of `tidy_indice` to tidy a whole set of data sheets and have the options to merge all data frames into one big data frame with `merge` set to `TRUE`:
+
+```{r}
+dir_path <- system.file("extdata", "gapminder", package = "tidygapminder")
+
+tidy_bunch(dir_path, merge = TRUE)
+```
+
+Enjoy!!!
