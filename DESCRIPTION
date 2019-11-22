@@ -1,6 +1,6 @@
 Package: tidygapminder
 Type: Package
-Title: Easily tidy Gapminder Datasets
+Title: Easily Tidy Gapminder Datasets
 Version: 0.1.0
 Authors@R: person("Anicet", "Ebou", ,"anicet.ebou@gmail.com",
                   role = c("aut", "cre"), comment = c(ORCID = "0000-0003-4005-177X"))
