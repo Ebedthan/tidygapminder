@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# tidygapminder
+
+[![Build Status](https://travis-ci.org/Ebedthan/tidygapminder.svg)](https://travis-ci.org/Ebedthan/tidygapminder)
+[![codecov](https://codecov.io/gh/Ebedthan/tidygapminder/branch/master/graph/badge.svg)](https://codecov.io/gh/Ebedthan/tidygapminder)
+[![Build status](https://ci.appveyor.com/api/projects/status/01ss9tmkw5jyaqfu?svg=true)](https://ci.appveyor.com/project/Ebedthan/tidygapminder)
+
+tidygapminder is designed to make easy to tidy data retrieved from [Gapminder](https://www.gapminder.org). Learn more in `vignette("tidygapminder")`.
+
+## Installation
+
+You can install the released version of tidygapminder from [CRAN](https://CRAN.R-project.org) with:
+
+```{r, eval = FALSE}
+install.packages("tidygapminder")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("ebedthan/tidygapminder")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(tidygapminder)
+
+# From ...
+df <- readxl::read_xlsx(system.file("extdata", "children_per_woman_total_fertility.xlsx", package = "tidygapminder"))
+
+df
+
+# To ...
+file <- system.file("extdata", "children_per_woman_total_fertility.xlsx", package = "tidygapminder")
+
+tidy_indice(file)
+```
