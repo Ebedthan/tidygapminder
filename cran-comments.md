@@ -7,3 +7,7 @@
 This is the first submission of tidygapminder.
 
 There were no ERRORs, WARNINGs or NOTEs.
+
+## Changes for CRAN submission
+* Description field has been elaborate in a better way.
+* Change Licence field from file LICENSE to GPL-2
