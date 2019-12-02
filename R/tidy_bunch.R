@@ -11,7 +11,7 @@
 #'    (if \code{merge} = TRUE).
 #'
 #' @examples
-#' # Select folder path
+#'
 #' folder_path <- system.file("extdata/gapminder", package = "tidygapminder")
 #'
 #' tidy_bunch(folder_path)

@@ -26,7 +26,7 @@ Tidy Gapminder indices data sheets stored in a folder
 using \code{\link{tidy_indice}}.
 }
 \examples{
-# Select folder path
+
 folder_path <- system.file("extdata/gapminder", package = "tidygapminder")
 
 tidy_bunch(folder_path)
