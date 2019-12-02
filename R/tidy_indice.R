@@ -1,8 +1,8 @@
-#' Tidy Gapminder indice single data sheet.
+#' Tidy Gapminder indicator single data sheet.
 #'
 #' @param filepath Path to indice data sheet.
 #'
-#' @return The indice data sheet as a tidy data frame.
+#' @return The indicator data sheet as a tidy data frame.
 #'
 #' @examples
 #'

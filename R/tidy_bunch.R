@@ -1,4 +1,4 @@
-#' Tidy Gapminder indices data sheets stored in a folder
+#' Tidy Gapminder indicator data sheets stored in a folder
 #' using \code{\link{tidy_indice}}.
 #'
 #' @param dirpath Absolute path to folder containing indices
