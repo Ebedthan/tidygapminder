@@ -31,6 +31,13 @@ When you have loaded the package you are now in possesion of two super powers (f
 ```{r}
 filepath <- system.file("extdata", "life_expectancy_years.csv", package = "tidygapminder")
 
+# From .............................
+df <- data.table::fread(filepath)
+
+df
+
+# To................................
+
 tidy_indice(filepath)
 ```
 
@@ -42,6 +49,10 @@ tidy_indice(filepath)
 ```{r}
 dir_path <- system.file("extdata", "gapminder", package = "tidygapminder")
 
+# From ................................
+list.files(dir_path)
+
+# To ..................................
 tidy_bunch(dir_path, merge = TRUE)
 ```
 
