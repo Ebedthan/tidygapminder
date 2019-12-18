@@ -40,16 +40,40 @@ devtools::install_github("ebedthan/tidygapminder")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r example-1}
 library(tidygapminder)
 
-# From ...
+# From ----------------------------------
 df <- readxl::read_xlsx(system.file("extdata", "agriculture_land.xlsx", package = "tidygapminder"))
 
 df
 
-# To ...
+# To ------------------------------------
 file <- system.file("extdata", "agriculture_land.xlsx", package = "tidygapminder")
 
 tidy_indice(file)
 ```
+
+Or more powerful: 
+
+```{r example-2}
+
+# From ----------------------------------------
+
+path <- system.file("extdata", package = "tidygapminder")
+
+list.files(path)
+
+df
+
+df_ <- data.table::fread(system.file("extdata", "life_expectancy_years.csv", package = "tidygapminder"))
+
+df_
+
+# To ------------------------------------------
+
+tidy_bunch(dirpath = path, merge = TRUE)
+
+```
+
+Enjoy `r emo::ji("smile")` !!!
