@@ -9,7 +9,7 @@
 #' csv_filepath <- system.file("extdata/life_expectancy_years.csv",
 #'                              package = "tidygapminder")
 #' xlsx_filepath <- system.file(
-#'                  "extdata/children_per_woman_total_fertility.xlsx",
+#'                  "extdata/agriculture_land.xlsx",
 #'                  package = "tidygapminder")
 #'
 #' tidy_indice(csv_filepath)

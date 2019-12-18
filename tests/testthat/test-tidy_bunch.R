@@ -1,4 +1,4 @@
-dir_path <- system.file("extdata", "gapminder", package = "tidygapminder")
+dir_path <- system.file("extdata", package = "tidygapminder")
 
 test_that("Output a list of data frame", {
   expect_true(is.list(tidy_bunch(dir_path)))

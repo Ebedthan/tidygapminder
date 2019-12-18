@@ -47,7 +47,7 @@ tidy_indice(filepath)
 `tidy_bunch` makes use of `tidy_indice` to tidy a whole set of data sheets and have the options to merge all data frames into one big data frame with `merge` set to `TRUE`:
 
 ```{r}
-dir_path <- system.file("extdata", "gapminder", package = "tidygapminder")
+dir_path <- system.file("extdata", package = "tidygapminder")
 
 # From ................................
 list.files(dir_path)

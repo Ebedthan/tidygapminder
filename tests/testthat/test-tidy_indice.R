@@ -1,4 +1,4 @@
-df <- system.file("extdata", "children_per_woman_total_fertility.xlsx",
+df <- system.file("extdata", "life_expectancy_years.csv",
                   package = "tidygapminder")
 
 test_that("Output a data frame", {
@@ -7,5 +7,5 @@ test_that("Output a data frame", {
 
 test_that("Colnames are right", {
   expect_equal(colnames(tidy_indice(df)),
-               c("country", "year", "children_per_woman_total_fertility"))
+               c("country", "year", "life_expectancy_years"))
 })

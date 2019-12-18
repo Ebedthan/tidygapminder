@@ -2,7 +2,7 @@
 % Please edit documentation in R/tidy_indice.R
 \name{tidy_indice}
 \alias{tidy_indice}
-\title{Tidy Gapminder indice single data sheet.}
+\title{Tidy Gapminder indicator single data sheet.}
 \usage{
 tidy_indice(filepath)
 }
@@ -10,17 +10,17 @@ tidy_indice(filepath)
 \item{filepath}{Path to indice data sheet.}
 }
 \value{
-The indice data sheet as a tidy data frame.
+The indicator data sheet as a tidy data frame.
 }
 \description{
-Tidy Gapminder indice single data sheet.
+Tidy Gapminder indicator single data sheet.
 }
 \examples{
 
 csv_filepath <- system.file("extdata/life_expectancy_years.csv",
                              package = "tidygapminder")
 xlsx_filepath <- system.file(
-                 "extdata/children_per_woman_total_fertility.xlsx",
+                 "extdata/agriculture_land.xlsx",
                  package = "tidygapminder")
 
 tidy_indice(csv_filepath)

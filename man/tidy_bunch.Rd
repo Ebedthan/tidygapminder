@@ -2,7 +2,7 @@
 % Please edit documentation in R/tidy_bunch.R
 \name{tidy_bunch}
 \alias{tidy_bunch}
-\title{Tidy Gapminder indices data sheets stored in a folder
+\title{Tidy Gapminder indicator data sheets stored in a folder
 using \code{\link{tidy_indice}}.}
 \usage{
 tidy_bunch(dirpath = ".", merge = FALSE, ...)
@@ -22,12 +22,12 @@ List of indices data frames tidied (if \code{merge} = FALSE)
    (if \code{merge} = TRUE).
 }
 \description{
-Tidy Gapminder indices data sheets stored in a folder
+Tidy Gapminder indicator data sheets stored in a folder
 using \code{\link{tidy_indice}}.
 }
 \examples{
 
-folder_path <- system.file("extdata/gapminder", package = "tidygapminder")
+folder_path <- system.file("extdata", package = "tidygapminder")
 
 tidy_bunch(folder_path)
 

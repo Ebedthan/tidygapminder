@@ -12,7 +12,7 @@
 #'
 #' @examples
 #'
-#' folder_path <- system.file("extdata/gapminder", package = "tidygapminder")
+#' folder_path <- system.file("extdata", package = "tidygapminder")
 #'
 #' tidy_bunch(folder_path)
 #'
@@ -38,7 +38,7 @@ tidy_bunch <- function(dirpath = ".", merge = FALSE, ...) {
   # Check if the user enable data frames to be merged into one
   # or not.
   if (merge == TRUE) {
-    df <- dplyr::bind_rows(df_list)
+    df <- Reduce(function(...) merge(..., all=T), df_list)
     df
   } else {
     df_list
