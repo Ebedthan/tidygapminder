@@ -20,7 +20,7 @@ This package aims to make really easy to tidy data retrieved from [Gapminder](ht
 library(tidygapminder)
 ```
 
-When you have loaded the package you are now in possesion of two super powers (functions): tidy_indice and tidy_bunch.
+When you have loaded the package you are now in possession of two super powers (functions): tidy_indice and tidy_bunch.
 
 ## tidy_indice
 
@@ -34,11 +34,13 @@ filepath <- system.file("extdata", "life_expectancy_years.csv", package = "tidyg
 # From .............................
 df <- data.table::fread(filepath)
 
-df
+head(df)
 
 # To................................
 
-tidy_indice(filepath)
+ti_df <- tidy_indice(filepath)
+
+head(ti_df)
 ```
 
 
@@ -53,7 +55,9 @@ dir_path <- system.file("extdata", package = "tidygapminder")
 list.files(dir_path)
 
 # To ..................................
-tidy_bunch(dir_path, merge = TRUE)
+td_dp <- tidy_bunch(dir_path, merge = TRUE)
+
+head(td_dp)
 ```
 
 Enjoy!!!
