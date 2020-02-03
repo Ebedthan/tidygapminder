@@ -8,7 +8,7 @@ using \code{\link{tidy_indice}}.}
 tidy_bunch(dirpath = ".", merge = FALSE, ...)
 }
 \arguments{
-\item{dirpath}{Absolute path to folder containing indices
+\item{dirpath}{Path to folder containing indices
 data sheets.}
 
 \item{merge}{A boolean. If true, combines all indices data sheets

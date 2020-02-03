@@ -35,6 +35,7 @@ tidy_indice <- function(filepath) {
   } else {
     file_desc <- colnames(df)[1]
   }
+
   # Tidy data ---------------------------------
   names(df)[1] <- "country"
   df <- tidyr::pivot_longer(data = df,

@@ -28,7 +28,7 @@ When you have loaded the package you are now in possesion of two super powers (f
 
 `tidy_indice` take as argument the path to the file and return the data as a tidy data frame.
 
-```{r}
+```{r, cache=TRUE}
 filepath <- system.file("extdata", "life_expectancy_years.csv", package = "tidygapminder")
 
 # From .............................
@@ -46,7 +46,7 @@ tidy_indice(filepath)
 
 `tidy_bunch` makes use of `tidy_indice` to tidy a whole set of data sheets and have the options to merge all data frames into one big data frame with `merge` set to `TRUE`:
 
-```{r}
+```{r, cache=TRUE}
 dir_path <- system.file("extdata", package = "tidygapminder")
 
 # From ................................
