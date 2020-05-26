@@ -32,7 +32,7 @@ When you have loaded the package you are now in possession of two super powers (
 filepath <- system.file("extdata", "life_expectancy_years.csv", package = "tidygapminder")
 
 # From .............................
-df <- data.table::fread(filepath)
+df <- readr::read_csv(filepath)
 
 head(df)
 

@@ -19,8 +19,11 @@
 tidy_indice <- function(filepath) {
 
   # Read data ---------------------------------
+  if(!file.exists(filepath)) {
+    stop("Input file not found: ", filepath)
+  }
   ext <- tolower(tools::file_ext(filepath))
-  switch(
+  df <- switch(
     ext,
     csv = readr::read_csv(filepath, col_types = readr::cols()),
     xlsx = readxl::read_xlsx(filepath),
