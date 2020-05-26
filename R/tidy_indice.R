@@ -19,14 +19,14 @@
 tidy_indice <- function(filepath) {
 
   # Read data ---------------------------------
-  # To enable reading of all format
-  if (tools::file_ext(filepath) == "xlsx") {
-    df <- readxl::read_xlsx(filepath)
-  } else if (tools::file_ext(filepath) == "csv") {
-    df <- data.table::fread(filepath, header = TRUE)
-  } else {
-    stop("Your file is not csv or xlsx formated")
-  }
+  ext <- tolower(tools::file_ext(filepath))
+  switch(
+    ext,
+    csv = readr::read_csv(filepath, col_types = readr::cols()),
+    xlsx = readxl::read_xlsx(filepath),
+    xls = readxl::read_xls(filepath),
+    stop("Unknown extension: ", ext)
+  )
 
   # To store indice name and description that is in first
   # cell of gapminder sheet.
