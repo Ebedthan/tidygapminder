@@ -28,7 +28,7 @@ tidy_index <- function(filepath) {
   # Read data --------------------------------------
   df <- switch(
     ext,
-    csv = read.csv(filepath, stringAsFactors = FALSE, check.names = FALSE),
+    csv = read.csv(filepath, stringsAsFactors = FALSE, check.names = FALSE),
     xlsx = readxl::read_xlsx(filepath),
     xls = readxl::read_xls(filepath),
     stop("Unsupported file extension: '.", ext, "'. Supported formats are .csv, .xlsx, and .xls")

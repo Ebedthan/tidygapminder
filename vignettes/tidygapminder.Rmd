@@ -1,8 +1,8 @@
 ---
-title: "A simple look into tidygapminder"
+title: "Getting started with tidygapminder"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{tidygapminder}
+  %\VignetteIndexEntry{Getting started with tidygapminder}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -10,54 +10,113 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment  = "#>"
 )
 ```
 
-This package aims to make really easy to tidy data retrieved from [Gapminder](https://www.gapminder.org). A the beginning is:
-
-```{r}
+```{r setup}
 library(tidygapminder)
 ```
 
-When you have loaded the package you are now in possession of two super powers (functions): tidy_indice and tidy_bunch.
+[Gapminder](https://www.gapminder.org) provides hundreds of indicators, life
+expectancy, income, CO₂ emissions, agricultural land, and more, as individual
+data sheets downloadable in `.csv` or `.xlsx` format. These sheets share a
+common structure that is convenient for distribution but awkward for analysis:
+the indicator name sits in cell A1, countries are rows, and years are spread
+across columns (wide format).
 
-## tidy_indice
+`tidygapminder` converts this wide format into a tidy long format where each
+row is one observation (one country, one year), making the data immediately
+ready for use with base R, ggplot2, or any other analysis tool.
 
-`tidy_indice` function tidy as explain above tidy a data sheet downloaded on Gapminder. This data sheet can be either in csv or xlsx as indicated on the gapminder site.
+## What a raw Gapminder sheet looks like
 
-`tidy_indice` take as argument the path to the file and return the data as a tidy data frame.
+Here is what a typical Gapminder sheet looks like before tidying:
 
-```{r, cache=TRUE}
-filepath <- system.file("extdata", "life_expectancy_years.csv", package = "tidygapminder")
+```{r}
+csv_path <- system.file("extdata/life_expectancy_years.csv",
+                         package = "tidygapminder")
 
-# From .............................
-df <- readr::read_csv(filepath)
+raw <- read.csv(csv_path, check.names = FALSE)
 
-head(df)
+# Indicator name is in the first column header
+colnames(raw)[1:6]
 
-# To................................
-
-ti_df <- tidy_indice(filepath)
-
-head(ti_df)
+# Countries are rows, years are columns
+head(raw[, 1:6])
 ```
 
+The first column header holds the indicator name (`life expectancy years`),
+and every subsequent column is a year. This wide format makes it hard to
+filter by year, plot trends, or join with other indicators.
 
-## tidy_bunch
+## Tidying a single sheet with `tidy_index()`
 
-`tidy_bunch` makes use of `tidy_indice` to tidy a whole set of data sheets and have the options to merge all data frames into one big data frame with `merge` set to `TRUE`:
+`tidy_index()` takes the path to a single Gapminder sheet (`.csv`, `.xlsx`,
+or `.xls`) and returns a tidy tibble with three columns: `country`, `year`,
+and the indicator.
 
-```{r, cache=TRUE}
+```{r}
+tidy_df <- tidy_index(csv_path)
+
+head(tidy_df)
+```
+
+Each row is now one observation. The indicator column is named after the file,
+which matches the Gapminder convention of naming files after their indicator.
+
+`tidy_index()` also handles `.xlsx` files identically:
+
+```{r}
+xlsx_path <- system.file("extdata/agriculture_land.xlsx",
+                          package = "tidygapminder")
+
+tidy_index(xlsx_path)
+```
+
+## Tidying a folder of sheets with `tidy_bunch()`
+
+When working with multiple indicators at once, `tidy_bunch()` applies
+`tidy_index()` to every compatible file in a directory and returns a named
+list of tibbles — one per file:
+
+```{r}
 dir_path <- system.file("extdata", package = "tidygapminder")
 
-# From ................................
-list.files(dir_path)
+result <- tidy_bunch(dir_path)
 
-# To ..................................
-td_dp <- tidy_bunch(dir_path, merge = TRUE)
+# One tibble per file, named after the indicator
+names(result)
 
-head(td_dp)
+head(result$life_expectancy_years)
 ```
 
-Enjoy!!!
+### Combining all indicators into one data frame
+
+Setting `combine = TRUE` merges all tibbles into a single data frame joined
+on `country` and `year`, using a full outer join so no observations are lost
+even when indicators cover different time ranges:
+
+```{r}
+combined <- tidy_bunch(dir_path, combine = TRUE)
+
+head(combined)
+```
+
+This combined format is convenient for multi-indicator analyses, for example
+plotting life expectancy against agricultural land use per country.
+
+## Error handling
+
+Both functions provide informative errors for common mistakes:
+
+```{r, error = TRUE}
+# File does not exist
+tidy_index("path/to/missing_file.csv")
+
+# Unsupported format
+tidy_index(tempfile(fileext = ".ods"))
+
+# Directory does not exist
+tidy_bunch("path/to/missing_dir")
+```
