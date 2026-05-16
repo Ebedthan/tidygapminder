@@ -4,190 +4,235 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A simple look into tidygapminder • tidygapminder</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="A simple look into tidygapminder">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Getting started with tidygapminder • tidygapminder</title>
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting started with tidygapminder">
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">tidygapminder</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.1</span>
-      </span>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../articles/tidygapminder.html">Get started</a>
-</li>
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
+    <a class="navbar-brand me-2" href="../index.html">tidygapminder</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0</small>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="active nav-item"><a class="nav-link" href="../articles/tidygapminder.html">Get started</a></li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/ebedthan/tidygapminder/" class="external-link">
-    <span class="fab fa-github fa-lg"></span>
-
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ebedthan/tidygapminder/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
 
 
-      </header><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>A simple look into tidygapminder</h1>
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+
+      <h1>Getting started with tidygapminder</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/ebedthan/tidygapminder/blob/main/vignettes/tidygapminder.Rmd" class="external-link"><code>vignettes/tidygapminder.Rmd</code></a></small>
-      <div class="hidden name"><code>tidygapminder.Rmd</code></div>
-
+      <div class="d-none name"><code>tidygapminder.Rmd</code></div>
     </div>
 
     
     
-<p>This package aims to make really easy to tidy data retrieved from <a href="https://www.gapminder.org" class="external-link">Gapminder</a>. A the beginning is:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ebedthan.github.io/tidygapminder" class="external-link">tidygapminder</a></span><span class="op">)</span></span></code></pre></div>
-<p>When you have loaded the package you are now in possession of two
-super powers (functions): tidy_indice and tidy_bunch.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ebedthan.github.io/tidygapminder">tidygapminder</a></span><span class="op">)</span></span></code></pre></div>
+<p><a href="https://www.gapminder.org" class="external-link">Gapminder</a> provides hundreds
+of indicators, life expectancy, income, CO₂ emissions, agricultural
+land, and more, as individual data sheets downloadable in
+<code>.csv</code> or <code>.xlsx</code> format. These sheets share a
+common structure that is convenient for distribution but awkward for
+analysis: the indicator name sits in cell A1, countries are rows, and
+years are spread across columns (wide format).</p>
+<p><code>tidygapminder</code> converts this wide format into a tidy long
+format where each row is one observation (one country, one year), making
+the data immediately ready for use with base R, ggplot2, or any other
+analysis tool.</p>
 <div class="section level2">
-<h2 id="tidy_indice">tidy_indice<a class="anchor" aria-label="anchor" href="#tidy_indice"></a>
+<h2 id="what-a-raw-gapminder-sheet-looks-like">What a raw Gapminder sheet looks like<a class="anchor" aria-label="anchor" href="#what-a-raw-gapminder-sheet-looks-like"></a>
 </h2>
-<p><code>tidy_indice</code> function tidy as explain above tidy a data
-sheet downloaded on Gapminder. This data sheet can be either in csv or
-xlsx as indicated on the gapminder site.</p>
-<p><code>tidy_indice</code> take as argument the path to the file and
-return the data as a tidy data frame.</p>
+<p>Here is what a typical Gapminder sheet looks like before tidying:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">filepath</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"life_expectancy_years.csv"</span>, package <span class="op">=</span> <span class="st">"tidygapminder"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">csv_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/life_expectancy_years.csv"</span>,</span>
+<span>                         package <span class="op">=</span> <span class="st">"tidygapminder"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># From .............................</span></span>
-<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="va">filepath</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">187</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">220</span></span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
-<span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> ","</span></span>
-<span><span class="co">#&gt; <span style="color: #BB0000;">chr</span>   (1): country</span></span>
-<span><span class="co">#&gt; <span style="color: #00BB00;">dbl</span> (219): 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809, 1810,...</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
+<span><span class="va">raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">csv_path</span>, check.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 220</span></span></span>
-<span><span class="co">#&gt;   country  `1800` `1801` `1802` `1803` `1804` `1805` `1806` `1807` `1808` `1809`</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Afghani…   28.2   28.2   28.2   28.2   28.2   28.2   28.1   28.1   28.1   28.1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Albania    35.4   35.4   35.4   35.4   35.4   35.4   35.4   35.4   35.4   35.4</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Algeria    28.8   28.8   28.8   28.8   28.8   28.8   28.8   28.8   28.8   28.8</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Andorra    <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Angola     27     27     27     27     27     27     27     27     27     27  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Antigua…   33.5   33.5   33.5   33.5   33.5   33.5   33.5   33.5   33.5   33.5</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 209 more variables: `1810` &lt;dbl&gt;, `1811` &lt;dbl&gt;, `1812` &lt;dbl&gt;, `1813` &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   `1814` &lt;dbl&gt;, `1815` &lt;dbl&gt;, `1816` &lt;dbl&gt;, `1817` &lt;dbl&gt;, `1818` &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   `1819` &lt;dbl&gt;, `1820` &lt;dbl&gt;, `1821` &lt;dbl&gt;, `1822` &lt;dbl&gt;, `1823` &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   `1824` &lt;dbl&gt;, `1825` &lt;dbl&gt;, `1826` &lt;dbl&gt;, `1827` &lt;dbl&gt;, `1828` &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   `1829` &lt;dbl&gt;, `1830` &lt;dbl&gt;, `1831` &lt;dbl&gt;, `1832` &lt;dbl&gt;, `1833` &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   `1834` &lt;dbl&gt;, `1835` &lt;dbl&gt;, `1836` &lt;dbl&gt;, `1837` &lt;dbl&gt;, `1838` &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   `1839` &lt;dbl&gt;, `1840` &lt;dbl&gt;, `1841` &lt;dbl&gt;, `1842` &lt;dbl&gt;, `1843` &lt;dbl&gt;, …</span></span></span>
+<span><span class="co"># Indicator name is in the first column header</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">raw</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span></span>
+<span><span class="co">#&gt; [1] "country" "1800"    "1801"    "1802"    "1803"    "1804"</span></span>
 <span></span>
-<span><span class="co"># To................................</span></span>
-<span></span>
-<span><span class="va">ti_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy_indice.html">tidy_indice</a></span><span class="op">(</span><span class="va">filepath</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">ti_df</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 3</span></span></span>
-<span><span class="co">#&gt;   country      year life_expectancy_years</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Afghanistan  <span style="text-decoration: underline;">1</span>800                  28.2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Afghanistan  <span style="text-decoration: underline;">1</span>801                  28.2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Afghanistan  <span style="text-decoration: underline;">1</span>802                  28.2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Afghanistan  <span style="text-decoration: underline;">1</span>803                  28.2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Afghanistan  <span style="text-decoration: underline;">1</span>804                  28.2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Afghanistan  <span style="text-decoration: underline;">1</span>805                  28.2</span></span></code></pre></div>
+<span><span class="co"># Countries are rows, years are columns</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">raw</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="co">#&gt;               country 1800 1801 1802 1803 1804</span></span>
+<span><span class="co">#&gt; 1         Afghanistan 28.2 28.2 28.2 28.2 28.2</span></span>
+<span><span class="co">#&gt; 2             Albania 35.4 35.4 35.4 35.4 35.4</span></span>
+<span><span class="co">#&gt; 3             Algeria 28.8 28.8 28.8 28.8 28.8</span></span>
+<span><span class="co">#&gt; 4             Andorra   NA   NA   NA   NA   NA</span></span>
+<span><span class="co">#&gt; 5              Angola 27.0 27.0 27.0 27.0 27.0</span></span>
+<span><span class="co">#&gt; 6 Antigua and Barbuda 33.5 33.5 33.5 33.5 33.5</span></span></code></pre></div>
+<p>The first column header holds the indicator name
+(<code>life expectancy years</code>), and every subsequent column is a
+year. This wide format makes it hard to filter by year, plot trends, or
+join with other indicators.</p>
 </div>
 <div class="section level2">
-<h2 id="tidy_bunch">tidy_bunch<a class="anchor" aria-label="anchor" href="#tidy_bunch"></a>
+<h2 id="tidying-a-single-sheet-with-tidy_index">Tidying a single sheet with <code>tidy_index()</code><a class="anchor" aria-label="anchor" href="#tidying-a-single-sheet-with-tidy_index"></a>
 </h2>
-<p><code>tidy_bunch</code> makes use of <code>tidy_indice</code> to tidy
-a whole set of data sheets and have the options to merge all data frames
-into one big data frame with <code>merge</code> set to
-<code>TRUE</code>:</p>
+<p><code><a href="../reference/tidy_index.html">tidy_index()</a></code> takes the path to a single Gapminder sheet
+(<code>.csv</code>, <code>.xlsx</code>, or <code>.xls</code>) and
+returns a tidy tibble with three columns: <code>country</code>,
+<code>year</code>, and the indicator.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">tidy_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy_index.html">tidy_index</a></span><span class="op">(</span><span class="va">csv_path</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">tidy_df</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 3</span></span></span>
+<span><span class="co">#&gt;   country              year life_expectancy_years</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Afghanistan          <span style="text-decoration: underline;">1</span>800                  28.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Albania              <span style="text-decoration: underline;">1</span>800                  35.4</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Algeria              <span style="text-decoration: underline;">1</span>800                  28.8</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Andorra              <span style="text-decoration: underline;">1</span>800                  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Angola               <span style="text-decoration: underline;">1</span>800                  27  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Antigua and Barbuda  <span style="text-decoration: underline;">1</span>800                  33.5</span></span></code></pre></div>
+<p>Each row is now one observation. The indicator column is named after
+the file, which matches the Gapminder convention of naming files after
+their indicator.</p>
+<p><code><a href="../reference/tidy_index.html">tidy_index()</a></code> also handles <code>.xlsx</code> files
+identically:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">xlsx_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/agriculture_land.xlsx"</span>,</span>
+<span>                          package <span class="op">=</span> <span class="st">"tidygapminder"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/tidy_index.html">tidy_index</a></span><span class="op">(</span><span class="va">xlsx_path</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 11,076 × 3</span></span></span>
+<span><span class="co">#&gt;    country              year `Agricultural land (% of land area)`</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                                <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Afghanistan          <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Albania              <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Algeria              <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> American Samoa       <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Andorra              <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Angola               <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Antigua and Barbuda  <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Argentina            <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Armenia              <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Aruba                <span style="text-decoration: underline;">1</span>960                                   <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 11,066 more rows</span></span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="tidying-a-folder-of-sheets-with-tidy_bunch">Tidying a folder of sheets with <code>tidy_bunch()</code><a class="anchor" aria-label="anchor" href="#tidying-a-folder-of-sheets-with-tidy_bunch"></a>
+</h2>
+<p>When working with multiple indicators at once,
+<code><a href="../reference/tidy_bunch.html">tidy_bunch()</a></code> applies <code><a href="../reference/tidy_index.html">tidy_index()</a></code> to every
+compatible file in a directory and returns a named list of tibbles — one
+per file:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dir_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, package <span class="op">=</span> <span class="st">"tidygapminder"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># From ................................</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">list.files</a></span><span class="op">(</span><span class="va">dir_path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "agriculture_land.xlsx"     "life_expectancy_years.csv"</span></span>
+<span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy_bunch.html">tidy_bunch</a></span><span class="op">(</span><span class="va">dir_path</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># To ..................................</span></span>
-<span><span class="va">td_dp</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy_bunch.html">tidy_bunch</a></span><span class="op">(</span><span class="va">dir_path</span>, merge <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co"># One tibble per file, named after the indicator</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "agriculture_land"      "life_expectancy_years"</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">td_dp</span><span class="op">)</span></span>
-<span><span class="co">#&gt;       country year Agricultural land (% of land area) life_expectancy_years</span></span>
-<span><span class="co">#&gt; 1 Afghanistan 1800                                 NA                  28.2</span></span>
-<span><span class="co">#&gt; 2 Afghanistan 1801                                 NA                  28.2</span></span>
-<span><span class="co">#&gt; 3 Afghanistan 1802                                 NA                  28.2</span></span>
-<span><span class="co">#&gt; 4 Afghanistan 1803                                 NA                  28.2</span></span>
-<span><span class="co">#&gt; 5 Afghanistan 1804                                 NA                  28.2</span></span>
-<span><span class="co">#&gt; 6 Afghanistan 1805                                 NA                  28.2</span></span></code></pre></div>
-<p>Enjoy!!!</p>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">life_expectancy_years</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 3</span></span></span>
+<span><span class="co">#&gt;   country              year life_expectancy_years</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Afghanistan          <span style="text-decoration: underline;">1</span>800                  28.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Albania              <span style="text-decoration: underline;">1</span>800                  35.4</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Algeria              <span style="text-decoration: underline;">1</span>800                  28.8</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Andorra              <span style="text-decoration: underline;">1</span>800                  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Angola               <span style="text-decoration: underline;">1</span>800                  27  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Antigua and Barbuda  <span style="text-decoration: underline;">1</span>800                  33.5</span></span></code></pre></div>
+<div class="section level3">
+<h3 id="combining-all-indicators-into-one-data-frame">Combining all indicators into one data frame<a class="anchor" aria-label="anchor" href="#combining-all-indicators-into-one-data-frame"></a>
+</h3>
+<p>Setting <code>combine = TRUE</code> merges all tibbles into a single
+data frame joined on <code>country</code> and <code>year</code>, using a
+full outer join so no observations are lost even when indicators cover
+different time ranges:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">combined</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy_bunch.html">tidy_bunch</a></span><span class="op">(</span><span class="va">dir_path</span>, combine <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">combined</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 4</span></span></span>
+<span><span class="co">#&gt;   country      year `Agricultural land (% of land area)` life_expectancy_years</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                                <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Afghanistan  <span style="text-decoration: underline;">1</span>800                                   <span style="color: #BB0000;">NA</span>                  28.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Afghanistan  <span style="text-decoration: underline;">1</span>801                                   <span style="color: #BB0000;">NA</span>                  28.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Afghanistan  <span style="text-decoration: underline;">1</span>802                                   <span style="color: #BB0000;">NA</span>                  28.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Afghanistan  <span style="text-decoration: underline;">1</span>803                                   <span style="color: #BB0000;">NA</span>                  28.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Afghanistan  <span style="text-decoration: underline;">1</span>804                                   <span style="color: #BB0000;">NA</span>                  28.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Afghanistan  <span style="text-decoration: underline;">1</span>805                                   <span style="color: #BB0000;">NA</span>                  28.2</span></span></code></pre></div>
+<p>This combined format is convenient for multi-indicator analyses, for
+example plotting life expectancy against agricultural land use per
+country.</p>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-      </div>
-
+</div>
+<div class="section level2">
+<h2 id="error-handling">Error handling<a class="anchor" aria-label="anchor" href="#error-handling"></a>
+</h2>
+<p>Both functions provide informative errors for common mistakes:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># File does not exist</span></span>
+<span><span class="fu"><a href="../reference/tidy_index.html">tidy_index</a></span><span class="op">(</span><span class="st">"path/to/missing_file.csv"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00; font-weight: bold;">Error</span><span style="font-weight: bold;"> in `tidy_index()`:</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00;">!</span> Input file not found: path/to/missing_file.csv</span></span>
+<span></span>
+<span><span class="co"># Unsupported format</span></span>
+<span><span class="fu"><a href="../reference/tidy_index.html">tidy_index</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".ods"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00; font-weight: bold;">Error</span><span style="font-weight: bold;"> in `tidy_index()`:</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00;">!</span> Input file not found: /tmp/Rtmpb4hHGF/file1a9042add418.ods</span></span>
+<span></span>
+<span><span class="co"># Directory does not exist</span></span>
+<span><span class="fu"><a href="../reference/tidy_bunch.html">tidy_bunch</a></span><span class="op">(</span><span class="st">"path/to/missing_dir"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00; font-weight: bold;">Error</span><span style="font-weight: bold;"> in `tidy_bunch()`:</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00;">!</span> Directory not found: path/to/missing_dir</span></span></code></pre></div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p></p>
-<p>Developed by Anicet Ebou.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p>Developed by Anicet Ebou.</p>
 </div>
 
-<div class="pkgdown">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+<div class="pkgdown-footer-right">
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
-
 
 
 

@@ -1,12 +1,12 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>/404.html</loc></url>
-<url><loc>/articles/index.html</loc></url>
-<url><loc>/articles/tidygapminder.html</loc></url>
-<url><loc>/authors.html</loc></url>
-<url><loc>/index.html</loc></url>
-<url><loc>/news/index.html</loc></url>
-<url><loc>/reference/index.html</loc></url>
-<url><loc>/reference/tidy_bunch.html</loc></url>
-<url><loc>/reference/tidy_indice.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/404.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/articles/index.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/articles/tidygapminder.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/authors.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/index.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/news/index.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/reference/index.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/reference/tidy_bunch.html</loc></url>
+<url><loc>https://ebedthan.github.io/tidygapminder/reference/tidy_index.html</loc></url>
 </urlset>
 
