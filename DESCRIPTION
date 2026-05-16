@@ -6,9 +6,8 @@ Authors@R: person("Anicet", "Ebou", ,"anicet.ebou@gmail.com", role = c("aut", "c
 Description: A toolset that allows you to easily import and tidy data sheets retrieved from Gapminder data web tools. It will therefore contribute to reduce the time used in data cleaning of Gapminder indicator data sheets as they are very messy.
 Depends: R (>= 4.1.0)
 Imports:
-    tidyr,
     readxl,
-    readr
+    tibble
 Suggests:
     testthat (>= 3.0.0),
     covr,
