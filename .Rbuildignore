@@ -5,7 +5,6 @@
 ^docs$
 ^pkgdown$
 ^cran-comments.md$
-^README\.Rmd$
 ^CRAN-RELEASE$
 ^\.positai$
 ^\.claude$
