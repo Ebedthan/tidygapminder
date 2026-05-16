@@ -4,12 +4,10 @@
 
 # tidygapminder
 
-[![Build Status](https://travis-ci.org/Ebedthan/tidygapminder.svg)](https://travis-ci.org/Ebedthan/tidygapminder)
-[![codecov](https://codecov.io/gh/Ebedthan/tidygapminder/branch/master/graph/badge.svg)](https://codecov.io/gh/Ebedthan/tidygapminder)
-[![Build status](https://ci.appveyor.com/api/projects/status/01ss9tmkw5jyaqfu?svg=true)](https://ci.appveyor.com/project/Ebedthan/tidygapminder)
-![](http://cranlogs.r-pkg.org/badges/grand-total/tidygapminder)
-![](https://www.r-pkg.org/badges/version-ago/tidygapminder)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![R-CMD-check](https://github.com/ebedthan/tidygapminder/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ebedthan/tidygapminder/actions/workflows/R-CMD-check.yaml)
+[![codecov](https://codecov.io/gh/ebedthan/tidygapminder/branch/master/graph/badge.svg)](https://codecov.io/gh/ebedthan/tidygapminder)
+[![test-coverage](https://github.com/ebedthan/tidygapminder/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/ebedthan/tidygapminder/actions/workflows/test-coverage.yaml)
+
 
 tidygapminder is designed to make easy to tidy data retrieved from [Gapminder](https://www.gapminder.org). Learn more in `vignette("tidygapminder")`.
 
