@@ -28,7 +28,7 @@ tidy_index <- function(filepath) {
   # Read data --------------------------------------
   df <- switch(
     ext,
-    csv = read.csv(filepath, stringsAsFactors = FALSE, check.names = FALSE),
+    csv = utils::read.csv(filepath, stringsAsFactors = FALSE, check.names = FALSE),
     xlsx = readxl::read_xlsx(filepath),
     xls = readxl::read_xls(filepath),
     stop("Unsupported file extension: '.", ext, "'. Supported formats are .csv, .xlsx, and .xls")
@@ -46,7 +46,7 @@ tidy_index <- function(filepath) {
   # Tidy data ---------------------------------
   names(df)[1] <- "country"
 
-  df_long <- reshape(
+  df_long <- stats::reshape(
     as.data.frame(df),
     varying = names(df)[-1],
     v.names = "value",
