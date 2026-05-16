@@ -1,8 +1,8 @@
-#' Tidy Gapminder indicator single data sheet.
+#' Tidy a Gapminder indicator data sheet.
 #'
-#' @param filepath Path to indice data sheet.
+#' @param filepath Path to a Gapminder indicator data sheet (.csv, .xlsx, or .xls).
 #'
-#' @return The indicator data sheet as a tidy data frame.
+#' @return The indicator data sheet as a tidy data frame with columns \code{country}, \code{year}, and the indicator name.
 #'
 #' @examples
 #'

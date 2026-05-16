@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
 
-names: R-CMD-check
+name: R-CMD-check
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
