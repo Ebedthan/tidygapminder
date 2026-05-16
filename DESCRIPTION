@@ -18,5 +18,5 @@ Encoding: UTF-8
 Config/testthat/edition: 3
 URL: https://ebedthan.github.io/tidygapminder
 BugReports: https://github.com/ebedthan/tidygapminder/issues
-RoxygenNote: 7.0.2
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0

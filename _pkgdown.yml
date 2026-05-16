@@ -1,1 +1,4 @@
-destination: docs
+url: https://ebedthan.github.io/tidygapminder
+
+template:
+  bootstrap: 5

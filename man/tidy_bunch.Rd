@@ -2,33 +2,33 @@
 % Please edit documentation in R/tidy_bunch.R
 \name{tidy_bunch}
 \alias{tidy_bunch}
-\title{Tidy Gapminder indicator data sheets stored in a folder
-using \code{\link{tidy_indice}}.}
+\title{Tidy Gapminder indicator data sheets stored in a folder.}
 \usage{
-tidy_bunch(dirpath = ".", merge = FALSE, ...)
+tidy_bunch(dirpath = ".", combine = FALSE, ...)
 }
 \arguments{
-\item{dirpath}{Path to folder containing indices
-data sheets.}
+\item{dirpath}{Path to folder containing indices Gapminder indicator data sheets.
+Defaults to the current working directory.}
 
-\item{merge}{A boolean. If true, combines all indices data sheets
-in one. Default: FALSE.}
+\item{combine}{A boolean. If \code{TRUE}, combines all tidied data sheets
+into a single data frame joined on \code{country} and \code{year}.
+Default:  \code{FALSE}.}
 
-\item{...}{Ellipsis.}
+\item{...}{Additional arguments (reserved for future use).}
 }
 \value{
-List of indices data frames tidied (if \code{merge} = FALSE)
-   or a single data frame of all indices tidied
-   (if \code{merge} = TRUE).
+If \code{combine = FALSE} (default), a named list of tibbles, one per file.
+  If \code{combine = TRUE}, a single tibble with all indicators merged by
+  \code{country} and \code{year}.
 }
 \description{
-Tidy Gapminder indicator data sheets stored in a folder
-using \code{\link{tidy_indice}}.
+Applies \code{\link{tidy_index}} to all Gapminder data sheets found in a
+directory and optionally combines them into a single data frame.
 }
 \examples{
-
 folder_path <- system.file("extdata", package = "tidygapminder")
 
 tidy_bunch(folder_path)
+tidy_bunch(folder_path, combine = TRUE)
 
 }
