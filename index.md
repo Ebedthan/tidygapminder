@@ -2,7 +2,7 @@
 
 [![R-CMD-check](https://github.com/ebedthan/tidygapminder/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ebedthan/tidygapminder/actions/workflows/R-CMD-check.yaml)
 [![test-coverage](https://github.com/ebedthan/tidygapminder/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/ebedthan/tidygapminder/actions/workflows/test-coverage.yaml)
-[![codecov](https://codecov.io/gh/ebedthan/tidygapminder/branch/master/graph/badge.svg)](https://codecov.io/gh/ebedthan/tidygapminder)
+[![codecov](https://app.codecov.io/gh/ebedthan/tidygapminder/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ebedthan/tidygapminder)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tidygapminder)](https://CRAN.R-project.org/package=tidygapminder)
 [![CRAN
@@ -86,6 +86,6 @@ result \<- tidy_bunch(dir_path) names(result)
 
 - Read the vignette:
   [`vignette("tidygapminder")`](https://ebedthan.github.io/tidygapminder/articles/tidygapminder.md)
-- Browse the documentation: <https://ebedthan.github.io/tidygapminder>
+- Browse the documentation: <https://ebedthan.github.io/tidygapminder/>
 - Found a bug? [Open an
   issue](https://github.com/ebedthan/tidygapminder/issues)
