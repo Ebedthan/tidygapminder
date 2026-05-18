@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/ebedthan/tidygapminder/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/ebedthan/tidygapminder/blob/v1.0.0/DESCRIPTION)
 
 Ebou A (2026). *tidygapminder: Easily Tidy Gapminder Datasets*. R
 package version 1.0.0, <https://ebedthan.github.io/tidygapminder/>.
