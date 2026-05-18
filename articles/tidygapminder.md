@@ -171,7 +171,7 @@ tidy_index("path/to/missing_file.csv")
 # Unsupported format
 tidy_index(tempfile(fileext = ".ods"))
 #> Error in `tidy_index()`:
-#> ! Input file not found: /tmp/RtmpXxoBos/file1a147698d2c.ods
+#> ! Input file not found: /tmp/RtmpZqoDhC/file1a0c348e0df2.ods
 
 # Directory does not exist
 tidy_bunch("path/to/missing_dir")
